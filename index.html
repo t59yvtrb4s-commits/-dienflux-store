@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dienflux | Smart Home & Bathroom Solutions</title>
+<title>Dienflux | Smart Living Store</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -15,8 +16,12 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
-background:#fff;
+background:#f7f9fc;
 color:#111;
 }
 
@@ -24,7 +29,7 @@ header{
 position:fixed;
 top:0;
 width:100%;
-background:white;
+background:#fff;
 box-shadow:0 2px 15px rgba(0,0,0,.08);
 z-index:1000;
 }
@@ -37,34 +42,34 @@ padding:20px 8%;
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:700;
-color:#0077ff;
+color:#0066ff;
 }
 
 nav ul{
 display:flex;
-list-style:none;
 gap:30px;
+list-style:none;
 }
 
-nav ul li a{
+nav a{
 text-decoration:none;
-color:#222;
+color:#111;
 font-weight:500;
 }
 
 .hero{
 padding:160px 8% 100px;
 display:flex;
-align-items:center;
 justify-content:space-between;
-gap:50px;
-background:linear-gradient(to right,#ffffff,#f3f8ff);
+align-items:center;
+gap:60px;
+background:linear-gradient(135deg,#ffffff,#eef5ff);
 }
 
 .hero-text{
-max-width:600px;
+max-width:650px;
 }
 
 .hero-text h1{
@@ -82,20 +87,20 @@ margin-bottom:30px;
 .btn{
 display:inline-block;
 padding:15px 35px;
-background:#0077ff;
+background:#0066ff;
 color:white;
 text-decoration:none;
-border-radius:10px;
+border-radius:12px;
 font-weight:600;
 transition:.3s;
 }
 
 .btn:hover{
-background:#005dd1;
+transform:translateY(-2px);
 }
 
 .hero img{
-width:500px;
+width:550px;
 max-width:100%;
 border-radius:20px;
 }
@@ -110,94 +115,60 @@ font-size:42px;
 margin-bottom:50px;
 }
 
-.categories{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
-.category-card{
+.card{
 background:white;
-padding:40px;
+padding:30px;
 border-radius:20px;
-text-align:center;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
 transition:.3s;
 }
 
-.category-card:hover{
-transform:translateY(-8px);
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.product-card{
-background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+.card:hover{
+transform:translateY(-5px);
 }
 
 .product-card img{
 width:100%;
 height:220px;
 object-fit:cover;
-}
-
-.product-card-content{
-padding:20px;
-}
-
-.product-card h3{
-margin-bottom:10px;
-}
-
-.price{
-color:#0077ff;
-font-weight:700;
-font-size:22px;
+border-radius:15px;
 margin-bottom:15px;
 }
 
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.feature{
-padding:30px;
-background:#f8f9fb;
-border-radius:20px;
-text-align:center;
-}
-
-.testimonials{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+.price{
+font-size:24px;
+font-weight:700;
+color:#0066ff;
+margin:10px 0;
 }
 
 .testimonial{
+background:white;
 padding:30px;
 border-radius:20px;
-background:#f8f9fb;
-}
-
-.faq{
-max-width:900px;
-margin:auto;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 .faq-item{
+background:white;
+padding:25px;
+border-radius:20px;
 margin-bottom:20px;
-padding:20px;
-background:#f8f9fb;
-border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact{
+text-align:center;
+padding:70px;
+background:white;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 footer{
@@ -208,8 +179,8 @@ text-align:center;
 }
 
 footer p{
-margin-top:15px;
-color:#bbb;
+color:#aaa;
+margin-top:10px;
 }
 
 @media(max-width:900px){
@@ -226,7 +197,9 @@ font-size:42px;
 nav ul{
 display:none;
 }
+
 }
+
 </style>
 </head>
 
@@ -234,153 +207,154 @@ display:none;
 
 <header>
 <nav>
+
 <div class="logo">DIENFLUX</div>
 
 <ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Shop</a></li>
-<li><a href="#">Bathroom Essentials</a></li>
-<li><a href="#">Water Filtration</a></li>
-<li><a href="#">Home Accessories</a></li>
-<li><a href="#">Contact</a></li>
+<li><a href="https://www.dienflux.com">Home</a></li>
+<li><a href="https://www.dienflux.com/collections/all">Shop</a></li>
+<li><a href="#categories">Categories</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
+
 </nav>
 </header>
 
 <section class="hero">
 
 <div class="hero-text">
-<h1>Upgrade Your Home Experience</h1>
+
+<h1>Everything You Need. One Trusted Store.</h1>
 
 <p>
-Premium bathroom essentials, water filtration products,
-home accessories and smart solutions designed for modern living.
+Discover premium bathroom essentials, water filtration products,
+electronics, home accessories and smart living solutions.
 </p>
 
-<a href="#" class="btn">Shop Now</a>
-</div>
-
-<img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" alt="Bathroom">
-</section>
-
-<section class="section">
-
-<h2 class="section-title">Shop By Category</h2>
-
-<div class="categories">
-
-<div class="category-card">
-<h3>Bathroom Essentials</h3>
-<p>Modern faucets, showers and accessories.</p>
-</div>
-
-<div class="category-card">
-<h3>Water Filtration</h3>
-<p>Advanced filters for cleaner water.</p>
-</div>
-
-<div class="category-card">
-<h3>Home Accessories</h3>
-<p>Smart products for daily living.</p>
-</div>
-
-<div class="category-card">
-<h3>Best Sellers</h3>
-<p>Most popular customer picks.</p>
-</div>
+<a href="https://www.dienflux.com/collections/all" class="btn">
+Shop Now
+</a>
 
 </div>
-</section>
 
-<section class="section">
-
-<h2 class="section-title">Featured Products</h2>
-
-<div class="products">
-
-<div class="product-card">
-<img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1" alt="">
-<div class="product-card-content">
-<h3>AquaShield Pro Filter</h3>
-<p class="price">$39.99</p>
-<a href="#" class="btn">View Product</a>
-</div>
-</div>
-
-<div class="product-card">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="">
-<div class="product-card-content">
-<h3>Luxury Rain Shower</h3>
-<p class="price">$69.99</p>
-<a href="#" class="btn">View Product</a>
-</div>
-</div>
-
-<div class="product-card">
-<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858" alt="">
-<div class="product-card-content">
-<h3>Bathroom Mixer Tap</h3>
-<p class="price">$49.99</p>
-<a href="#" class="btn">View Product</a>
-</div>
-</div>
-
-</div>
+<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200"
+alt="Dienflux">
 
 </section>
 
 <section class="section">
 
-<h2 class="section-title">Why Choose Dienflux?</h2>
+<div class="grid">
 
-<div class="features">
+<div class="card">
+<h3>🚚 Fast Shipping</h3>
+<p>Reliable delivery on all orders.</p>
+</div>
 
-<div class="feature">
-<h3>Premium Quality</h3>
+<div class="card">
+<h3>🔒 Secure Checkout</h3>
+<p>Safe and protected payments.</p>
+</div>
+
+<div class="card">
+<h3>⭐ Quality Products</h3>
 <p>Carefully selected products.</p>
 </div>
 
-<div class="feature">
-<h3>Fast Shipping</h3>
-<p>Reliable worldwide delivery.</p>
-</div>
-
-<div class="feature">
-<h3>Secure Checkout</h3>
-<p>Safe and trusted payments.</p>
-</div>
-
-<div class="feature">
-<h3>Customer Support</h3>
-<p>Dedicated assistance when needed.</p>
+<div class="card">
+<h3>💬 Customer Support</h3>
+<p>Dedicated support team.</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="section">
+<section class="section" id="categories">
+
+<h2 class="section-title">Shop By Category</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Water Filtration</h3>
+<p>Advanced shower filters and water solutions.</p>
+</div>
+
+<div class="card">
+<h3>Bathroom Essentials</h3>
+<p>Showers, faucets, mixers and accessories.</p>
+</div>
+
+<div class="card">
+<h3>Home Essentials</h3>
+<p>Useful products for everyday living.</p>
+</div>
+
+<div class="card">
+<h3>Electronics</h3>
+<p>Chargers, gadgets and accessories.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="products">
+
+<h2 class="section-title">Featured Products</h2>
+
+<div class="grid">
+
+<div class="card product-card">
+<img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=800">
+<h3>20-Stage Shower Filter</h3>
+<p class="price">$24.99</p>
+<a href="https://www.dienflux.com" class="btn">View Product</a>
+</div>
+
+<div class="card product-card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800">
+<h3>Luxury Rain Shower</h3>
+<p class="price">$69.99</p>
+<a href="https://www.dienflux.com" class="btn">View Product</a>
+</div>
+
+<div class="card product-card">
+<img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800">
+<h3>Bathroom Mixer</h3>
+<p class="price">$49.99</p>
+<a href="https://www.dienflux.com" class="btn">View Product</a>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="reviews">
 
 <h2 class="section-title">Customer Reviews</h2>
 
-<div class="testimonials">
+<div class="grid">
 
 <div class="testimonial">
 ★★★★★
 <br><br>
-Excellent quality and fast delivery.
+Excellent quality and fast shipping.
 </div>
 
 <div class="testimonial">
 ★★★★★
 <br><br>
-The shower filter made a noticeable difference.
+The shower filter exceeded expectations.
 </div>
 
 <div class="testimonial">
 ★★★★★
 <br><br>
-Beautiful products and easy installation.
+Easy ordering and reliable service.
 </div>
 
 </div>
@@ -391,8 +365,6 @@ Beautiful products and easy installation.
 
 <h2 class="section-title">Frequently Asked Questions</h2>
 
-<div class="faq">
-
 <div class="faq-item">
 <h3>How long does shipping take?</h3>
 <p>Most orders arrive within 7-15 business days.</p>
@@ -400,22 +372,50 @@ Beautiful products and easy installation.
 
 <div class="faq-item">
 <h3>Do you offer returns?</h3>
-<p>Yes, we offer a customer-friendly return policy.</p>
+<p>Yes. We offer a customer-friendly return policy.</p>
 </div>
 
 <div class="faq-item">
-<h3>Are your shower filters easy to install?</h3>
-<p>Yes, installation takes only a few minutes.</p>
+<h3>How can I contact support?</h3>
+<p>Use the contact page on Dienflux.com.</p>
 </div>
+
+</section>
+
+<section class="section" id="contact">
+
+<div class="contact">
+
+<h2>Contact Dienflux</h2>
+
+<p style="margin-top:15px;">
+Need help with your order?
+</p>
+
+<br>
+
+<a href="https://www.dienflux.com/pages/contact" class="btn">
+Contact Us
+</a>
 
 </div>
 
 </section>
 
 <footer>
+
 <h2>DIENFLUX</h2>
-<p>Smart Home & Bathroom Solutions</p>
-<p>© 2026 Dienflux. All Rights Reserved.</p>
+
+<p>Smart Living Store</p>
+
+<p>
+Home Essentials • Bathroom Solutions • Water Filtration • Electronics
+</p>
+
+<p>
+© 2026 Dienflux. All Rights Reserved.
+</p>
+
 </footer>
 
 </body>
